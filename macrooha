@@ -1,0 +1,70 @@
+REM  *****  BASIC  *****
+
+Sub Main
+  Dim oDoc
+
+  Dim sTextService$
+
+  Dim oCurs
+
+  oDoc = ThisComponent
+
+  randomize()
+
+  oCurs = oDoc.currentController.getViewCursor()
+  oCursor = ThisComponent.Text.createTextCursor()
+  
+  oCurs = oCursor
+
+  oCursor.gotoStart(False)
+
+  m = oDoc.WordCount()
+
+  FOR i = 1 to m
+    oCursor.gotoEndOfWord(True)
+    oCursor.goRight(2, True)
+    r = int(rnd() * 16)
+
+    IF r > 7 THEN
+      n = InStr(oCursor.string, ",")
+      oCursor.goLeft(2, False)
+      j = Len(oCursor.string)
+
+      IF n > 0 THEN
+        oCursor.gotoNextWord(False)
+
+        SELECT CASE r
+        CASE 8
+          oCursor.Text.insertString(oCursor, " ну это, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 9
+          oCursor.Text.insertString(oCursor, " типа, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 10
+          oCursor.Text.insertString(oCursor, " как бы, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 11
+          oCursor.Text.insertString(oCursor, " понимаешь, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 12
+          oCursor.Text.insertString(oCursor, " бля, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 13
+          oCursor.Text.insertString(oCursor, " ээ, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 14
+          oCursor.Text.insertString(oCursor, " блин, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 15
+          oCursor.Text.insertString(oCursor, " как его, ", False) 
+          oCursor.gotoNextWord(False)
+        END SELECT
+
+      END IF
+
+    END IF
+
+    oCursor.gotoNextWord(False)
+  NEXT
+
+End Sub

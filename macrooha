@@ -68,3 +68,186 @@ Sub Main
   NEXT
 
 End Sub
+
+Sub Chebito
+  Dim oDoc
+
+  Dim sTextService$
+
+  Dim oCurs
+
+  oDoc = ThisComponent
+
+  randomize()
+
+  oCurs = oDoc.currentController.getViewCursor()
+  oCursor = ThisComponent.Text.createTextCursor()
+  
+  oCurs = oCursor
+
+  oCursor.gotoStart(False)
+
+  m = oDoc.WordCount()
+
+  FOR i = 1 to m
+    oCursor.gotoEndOfWord(True)
+    oCursor.goRight(2, True)
+    r = int(rnd() * 22)
+
+    IF r > 6 THEN
+      n = InStr(oCursor.string, ",")
+      oCursor.goLeft(2, False)
+      j = Len(oCursor.string)
+
+      IF n > 0 THEN
+        oCursor.gotoNextWord(False)
+
+        SELECT CASE r
+        CASE 7
+          oCursor.Text.insertString(oCursor, " literally, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 8
+          oCursor.Text.insertString(oCursor, " kinda ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 9
+          oCursor.Text.insertString(oCursor, " sorta ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 10
+          oCursor.Text.insertString(oCursor, " well, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 11
+          oCursor.Text.insertString(oCursor, " right, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 12
+          oCursor.Text.insertString(oCursor, " you know, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 13
+          oCursor.Text.insertString(oCursor, " uhm, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 14
+          oCursor.Text.insertString(oCursor, " okay, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 15
+          oCursor.Text.insertString(oCursor, " like ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 16
+          oCursor.Text.insertString(oCursor, " I mean, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 17
+          oCursor.Text.insertString(oCursor, " you see, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 18
+          oCursor.Text.insertString(oCursor, " believe me, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 19
+          oCursor.Text.insertString(oCursor, " I guess, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 20
+          oCursor.Text.insertString(oCursor, " or something ", False) 
+          oCursor.gotoNextWord(False)
+        END SELECT
+
+      END IF
+
+    END IF
+
+    oCursor.gotoNextWord(False)
+  NEXT
+
+End Sub
+
+Sub Mae
+  Dim oDoc
+
+  Dim sTextService$
+
+  Dim oCurs
+
+  oDoc = ThisComponent
+
+  randomize()
+
+  oCurs = oDoc.currentController.getViewCursor()
+  oCursor = ThisComponent.Text.createTextCursor()
+  
+  oCurs = oCursor
+
+  oCursor.gotoStart(False)
+
+  m = oDoc.WordCount()
+
+  FOR i = 1 to m
+    oCursor.gotoEndOfWord(True)
+    oCursor.goRight(2, True)
+    r = int(rnd() * 24)
+
+    IF r > 6 THEN
+      n = InStr(oCursor.string, ",")
+      oCursor.goLeft(2, False)
+      j = Len(oCursor.string)
+
+      IF n > 0 THEN
+        oCursor.gotoNextWord(False)
+
+        SELECT CASE r
+        CASE 7
+          oCursor.Text.insertString(oCursor, " pues, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 8
+          oCursor.Text.insertString(oCursor, " a ver, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 9
+          oCursor.Text.insertString(oCursor, " en plan ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 10
+          oCursor.Text.insertString(oCursor, " digo, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 11
+          oCursor.Text.insertString(oCursor, " o sea, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 12
+          oCursor.Text.insertString(oCursor, " entonces, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 13
+          oCursor.Text.insertString(oCursor, " así que bueno, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 14
+          oCursor.Text.insertString(oCursor, " bueno, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 15
+          oCursor.Text.insertString(oCursor, " es que ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 16
+          oCursor.Text.insertString(oCursor, " pues, eso, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 17
+          oCursor.Text.insertString(oCursor, " eso, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 18
+          oCursor.Text.insertString(oCursor, " en fin, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 19
+          oCursor.Text.insertString(oCursor, " a final de cuentas, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 20
+          oCursor.Text.insertString(oCursor, " mae, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 21
+          oCursor.Text.insertString(oCursor, " mi hermano, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 22
+          oCursor.Text.insertString(oCursor, " mi amigazo, ", False) 
+          oCursor.gotoNextWord(False)
+        CASE 23
+          oCursor.Text.insertString(oCursor, " gracias a Dios, ", False) 
+          oCursor.gotoNextWord(False)
+        END SELECT
+
+      END IF
+
+    END IF
+
+    oCursor.gotoNextWord(False)
+  NEXT
+
+End Sub
